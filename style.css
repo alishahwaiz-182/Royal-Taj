@@ -22,9 +22,6 @@ nav .logoname {
     font-size: 40px;
     color: rgb(234, 178, 24);
     font-weight: 600;
-}
-
-nav .logoname:hover {
     cursor: pointer;
 }
 
@@ -77,8 +74,6 @@ ul li a:hover {
         top: 100px;
         left: 0px;
         width: 100%;
-        gap: 20px;
-        padding: 20px 0px;
         background-color: rgb(86, 11, 63);
         display: none;
     }
@@ -103,12 +98,18 @@ main {
 }
 
 .home1 {
-    height: 60vh;
+    height: 90vh;
     width: 100%;
     background-image: url("img/home.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .home1 {
+        height: 50vh;
+    }
 }
 
 .home2 {
@@ -122,18 +123,17 @@ main {
 }
 
 .home2 .imgcontainer {
-    height: auto;
     width: 100%;
     max-width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
 }
 
 .home2 .imgcontainer img {
     box-shadow: 0px 10px 30px rgba(234, 178, 24, 0.5);
     width: 100%;
+    border-radius: 10px;
 }
 
 .home2 h1 {
@@ -142,6 +142,12 @@ main {
     padding: 0;
     margin-top: 30px;
     font-size: 36px;
+}
+
+@media (max-width: 768px) {
+    .home2 h1 {
+        font-size: 26px;
+    }
 }
 
 .home2 p {
@@ -153,22 +159,27 @@ main {
     max-width: 600px;
 }
 
+@media (max-width: 768px) {
+    .home2 p {
+        font-size: 15px;
+    }
+}
+
 .home2 button {
     background-color: rgb(234, 178, 28);
     color: white;
-    padding: 10px 15px;
+    padding: 10px 25px;
     border: none;
     border-radius: 10px;
     margin-top: 20px;
-    margin-left: 0;
     transition: all 1.5s;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .home2 button:hover {
     background-color: rgb(203, 154, 20);
-    padding: 15px 25px;
-    transition: all 1.5s;
+    padding: 15px 30px;
 }
 
 section.menu {
@@ -177,25 +188,36 @@ section.menu {
     padding: 50px 20px;
 }
 
+section.menu h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: rgb(214, 164, 28);
+}
+
+section.menu p {
+    color: gray;
+    margin-bottom: 20px;
+}
+
 .cardscontainer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .cards {
-    height: auto;
-    width: 350px;
+    width: 320px;
     transition: all 1.5s;
-    transform-origin: bottom;
-    margin: 20px;
+    margin: 10px;
 }
 
 .cardimg img {
     width: 100%;
-    height: 300px;
+    height: 280px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .cards a {
@@ -209,33 +231,31 @@ section.menu {
     text-decoration: none;
     background-color: rgb(234, 178, 28);
     color: white;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 10px;
     transition: all 1.5s;
 }
 
 .cardbtn:hover {
     background-color: rgba(190, 103, 16, 0.863);
-    padding: 13px 20px;
-    transition: all 1.5s;
+    padding: 13px 25px;
 }
 
 .cards .title {
     color: rgb(214, 164, 28);
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 600;
     text-align: center;
     margin: 10px 0;
 }
 
 .cards:hover {
-    transition: all 1.5s;
     transform: scale(1.03);
 }
 
 .contactus {
     background-color: rgb(86, 11, 63);
-    min-height: 100vh;
+    min-height: 60vh;
     padding: 80px 20px;
     text-align: center;
 }
@@ -305,6 +325,7 @@ footer {
     align-items: flex-start;
     padding: 50px 20px;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
 .footer-logo h2 {
@@ -361,6 +382,5 @@ footer {
         flex-direction: column;
         text-align: center;
         align-items: center;
-        gap: 30px;
     }
 }
