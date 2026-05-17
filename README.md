@@ -3,7 +3,8 @@
 A responsive premium restaurant landing page with custom CSS and JavaScript form validation.
 
 ##  Live Demo
-[Click here to view](https://alishahwaiz-182.github.io/Royal-Taj/)
+[Click here to view](https://royal-taj-restaurant.netlify.app/
+)
 
 ##  Features
 - Fixed navbar with hamburger menu
