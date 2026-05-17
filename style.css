@@ -1,431 +1,366 @@
- * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        nav {
-            height: 100px;
-            background-color: rgb(86, 11, 63);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            box-shadow: 0px 3px 30px rgba(234, 178, 24, 0.5);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-
-        }
-
-        nav .logoname {
-            font-size: 40px;
-            color: rgb(234, 178, 24);
-            font-weight: 600;
-        }
-
-        nav .logoname:hover {
-            cursor: pointer;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-        }
-
-        nav ul li {
-            list-style: none;
-
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 20px;
-            transition: all 1.5s;
-
-        }
-
-        ul li a:hover {
-            background-color: rgb(214, 164, 28);
-            padding: 14px 35px;
-            border-radius: 10px;
-            transition: 1.5s;
-
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 6px;
-            cursor: pointer;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-        }
-
-        @media (max-width:768px) {
-
-            nav {
-                justify-content: space-between;
-                padding: 0px 30px;
-            }
-
-            .second {
-                position: absolute;
-                top: 100px;
-                left: 0px;
-                width: 100%;
-                gap: 20px;
-                padding: 20px 0px;
-                background-color: rgb(86, 11, 63);
-                display: none;
-            }
-
-            .second ul {
-                flex-direction: column;
-                gap: 20px;
-                padding: 20px 0px;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .second.active {
-                display: block;
-            }
-        }
-
-        main {
-            padding-top: 100px;
-        }
-
-        .home1 {
-            height: 120vh;
-            width: 100%;
-            background-image: url("img/home.webp");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding-top: 500px;
-        }
-
-
-        .home2 {
-            height: 100vh;
-            width: 100%;
-            background-color: rgb(86, 11, 63);
-            
-
-        }
-
-        .home2 .imgcontainer {
-            height: 450px;
-            width: 700px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 250px;
-            padding-left: 50px;
-            /* flex-direction: column-reverse; */
-
-        }
-
-        .home2 .imgcontainer img {
-            box-shadow: 0px 10px 30px rgba(234, 178, 24, 0.5);
-            width: 100%;
-        }
-
-        .home2 h1 {
-            color: rgb(214, 164, 28);
-            text-align: center;
-            padding-left: 700px;
-            margin-top: -150px;
-        }
-
-        .home2 p {
-            color: white;
-            font-size: 20px;
-            text-align: center;
-            padding-left: 700px;
-            margin-top: 20px;
-        }
-
-        .home2 button {
-            background-color: rgb(234, 178, 28);
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 10px;
-            margin-top: 20px;
-            margin-left: 1050px;
-            transition: all 1.5s;
-
-        }
-
-        .home2 button:hover {
-            background-color: rgb(203, 154, 20);
-            padding: 15px 25px;
-            transition: all 1.5s;
-        }
-
-
-        @media (max-width:1268px) {
-            
-                .home2 {
-                height: 80vh;
-                text-align: center;
-
-            }
-
-            .home2 h1 {
-                font-size: 48px;
-                padding-right: 0;
-                padding-left: 0;
-                margin-top: 180px;
-            }
-
-            .home2 p {
-                font-size: 16px;
-                padding-left: 0;
-                padding-right: 0;
-            }
-            .home2 button{
-                margin-left: -20px;
-            }
-            .home img{
-                margin-left: -20px;
-            }
-        }
-        section.menu {
-            height: 100vh;
-            width: 100%;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .cardscontainer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .cards {
-            /* margin: 20px 20px 0px 20px; */
-            height: 550px;
-            width: 450px;
-            transition: all 1.5s;
-            transform-origin: bottom;
-            margin: 20px 20px 20px 20px;
-        }
-
-        .cardimg img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-
-
-        }
-
-        .cards a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0px 160px 0px 160px;
-        }
-
-        .cardbtn {
-            text-decoration: none;
-           background-color: rgb(234, 178, 28);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 10px;
-            transition: all 1.5s;
-
-        }
-
-        .cardbtn:hover {
-            background-color: rgba(190, 103, 16, 0.863);
-            padding: 13px 20px;
-            margin: 0px 147px 0px 140px;
-            transition: all 1.5s;
-        }
-
-        .cards .title {
-            color: rgb(214, 164, 28);
-            font-size: 25px;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .cards .para {
-            color: white;
-            font-size: 20px;
-            text-align: center;
-            margin: 5px 0px;
-        }
-
-        .cards:hover {
-            transition: all 1.5s;
-            transform: scale(1.03);
-
-        }
-
-        @media (max-width:1457px) {
-
-            section.menu {
-                height: 100%;
-            }
-
-            .cardscontainer {
-                flex-direction: column;
-            }
-        }
-
-        .contactus {
-            margin-top: 600px;
-            background-color: rgb(86, 11, 63);
-            min-height: 100vh;
-            padding: 150px 20px;
-            text-align: center;
-        }
-
-        .contactus h1 {
-            color: rgb(214, 164, 28);
-            margin-bottom: 10px;
-        }
-
-        .contactus p {
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        
-        .contact-form {
-            max-width: 500px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        
-        .contact-form input,
-        .contact-form textarea {
-            padding: 12px 15px;
-            border-radius: 8px;
-            border: none;
-            outline: none;
-            font-size: 16px;
-        }
-
-        .contact-form textarea {
-            resize: none;
-            height: 120px;
-        }
-
-        
-        .contact-form button {
-            background-color: transparent;
-            border: 2px solid rgb(203, 154, 20);
-            color: white;
-            padding: 12px;
-            border-radius: 15px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 1.5s;
-        }
-
-        .contact-form button:hover {
-            background-color: rgb(234, 178, 28);
-        }
-
-        
-        @media (max-width: 600px) {
-            .contact-form {
-                width: 100%;
-            }
-        }
-
-
-        footer {
-            background-color: rgb(86, 11, 63);
-            box-shadow: 0px -3px 30px rgba(190, 103, 16, 0.863);
-            color: white;
-            /* margin-top: 50px; */
-        }
-
-        .footer-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            padding: 50px 20px;
-            flex-wrap: wrap;
-        }
-
-        .footer-logo h2 {
-            color: rgb(214, 164, 28);
-            font-size: 30px;
-        }
-
-        .footer-logo p {
-            margin-top: 10px;
-            font-size: 16px;
-        }
-
-        .footer-links h3,
-        .footer-contact h3 {
-            color: rgb(214, 164, 28);
-            margin-bottom: 15px;
-        }
-
-        .footer-links ul {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .footer-links ul li {
-            list-style: none;
-        }
-
-        .footer-links ul li a {
-            color: white;
-            text-decoration: none;
-            transition: all 1.5s;
-        }
-
-        .footer-links ul li a:hover {
-            background-color: rgb(203, 154, 20);
-            padding: 10px 20px;
-            border-radius: 10px;
-        }
-
-        .footer-contact p {
-            margin-bottom: 10px;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding: 15px 0;
-            border-top: 1px solid rgb(230, 107, 12);
-            font-size: 14px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .footer-container {
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-                gap: 30px;
-            }
-        };
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 100px;
+    background-color: rgb(86, 11, 63);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 3px 30px rgba(234, 178, 24, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .logoname {
+    font-size: 40px;
+    color: rgb(234, 178, 24);
+    font-weight: 600;
+}
+
+nav .logoname:hover {
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: all 1.5s;
+}
+
+ul li a:hover {
+    background-color: rgb(214, 164, 28);
+    padding: 14px 35px;
+    border-radius: 10px;
+    transition: 1.5s;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+@media (max-width:768px) {
+    nav {
+        justify-content: space-between;
+        padding: 0px 30px;
+    }
+
+    .second {
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        width: 100%;
+        gap: 20px;
+        padding: 20px 0px;
+        background-color: rgb(86, 11, 63);
+        display: none;
+    }
+
+    .second ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .second.active {
+        display: block;
+    }
+}
+
+main {
+    padding-top: 100px;
+}
+
+.home1 {
+    height: 120vh;
+    width: 100%;
+    background-image: url("img/home.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home2 {
+    width: 100%;
+    background-color: rgb(86, 11, 63);
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.home2 .imgcontainer {
+    height: auto;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.home2 .imgcontainer img {
+    box-shadow: 0px 10px 30px rgba(234, 178, 24, 0.5);
+    width: 100%;
+}
+
+.home2 h1 {
+    color: rgb(214, 164, 28);
+    text-align: center;
+    padding: 0;
+    margin-top: 30px;
+    font-size: 36px;
+}
+
+.home2 p {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 0;
+    margin-top: 20px;
+    max-width: 600px;
+}
+
+.home2 button {
+    background-color: rgb(234, 178, 28);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 0;
+    transition: all 1.5s;
+    cursor: pointer;
+}
+
+.home2 button:hover {
+    background-color: rgb(203, 154, 20);
+    padding: 15px 25px;
+    transition: all 1.5s;
+}
+
+section.menu {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cardscontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cards {
+    height: auto;
+    width: 350px;
+    transition: all 1.5s;
+    transform-origin: bottom;
+    margin: 20px;
+}
+
+.cardimg img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.cards a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.cardbtn {
+    text-decoration: none;
+    background-color: rgb(234, 178, 28);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 1.5s;
+}
+
+.cardbtn:hover {
+    background-color: rgba(190, 103, 16, 0.863);
+    padding: 13px 20px;
+    transition: all 1.5s;
+}
+
+.cards .title {
+    color: rgb(214, 164, 28);
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.cards:hover {
+    transition: all 1.5s;
+    transform: scale(1.03);
+}
+
+.contactus {
+    background-color: rgb(86, 11, 63);
+    min-height: 100vh;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contactus h1 {
+    color: rgb(214, 164, 28);
+    margin-bottom: 10px;
+}
+
+.contactus p {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact-form button {
+    background-color: transparent;
+    border: 2px solid rgb(203, 154, 20);
+    color: white;
+    padding: 12px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 1.5s;
+}
+
+.contact-form button:hover {
+    background-color: rgb(234, 178, 28);
+}
+
+@media (max-width: 600px) {
+    .contact-form {
+        width: 100%;
+    }
+}
+
+footer {
+    background-color: rgb(86, 11, 63);
+    box-shadow: 0px -3px 30px rgba(190, 103, 16, 0.863);
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.footer-logo h2 {
+    color: rgb(214, 164, 28);
+    font-size: 30px;
+}
+
+.footer-logo p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    color: rgb(214, 164, 28);
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links ul li {
+    list-style: none;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: all 1.5s;
+}
+
+.footer-links ul li a:hover {
+    background-color: rgb(203, 154, 20);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid rgb(230, 107, 12);
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 30px;
+    }
+}
